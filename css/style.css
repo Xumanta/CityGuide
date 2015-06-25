@@ -4,10 +4,12 @@ body {
     background-color: #E6E6E6;
 }
 .header {
-    background-color: white;
+    background-color: #607D8B;
     width: 100%;
     height: 3em;
     box-shadow: 2px 4px 4.75px 0.25px rgba(0, 0, 0, 0.35);
+    position: fixed;
+    top: 0;
 }
 
 .logo > h1 {
@@ -37,20 +39,19 @@ body {
     z-index: 1;
 }
 
-.attraktion {
-    margin-bottom: 0.5em;
-}
 .language {
+    position: relative;
+    left: 7em;
     width: 2em;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    float : left;
     margin: 0.7em;
-
 }
 
 .container > .logo > img {
+    position: fixed;
+    top: 0;
     margin-top: 0.2em;
     margin-left: 0.2em;
     margin-bottom: 0.2em;
@@ -58,15 +59,33 @@ body {
     float:left;
 }
 
-
-.content {
-    margin-top: 0.5em;
+.attraktion {
+    margin-top: 5em;
     margin-bottom: 0.5em;
     margin-left: 1em;
     margin-right: 1em;
-    background-color: white;
+    background-color: #FFFFFF;
     box-shadow: 0px 5px 4.75px 0.25px rgba(0, 0, 0, 0.35);
     width: auto;
-    height: 20em;
-    z-index: 11;
+    height: auto;
+}
+
+h4 {
+    color: #212121;
+    font-family: sans-serif;
+    font-size: 2em;
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    border-top-width: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.attraktion > p {
+    padding-left: 10;
+    font-family: sans-serif;
+    margin-top: 0px;
+    margin-bottom: 0.5em;
 }

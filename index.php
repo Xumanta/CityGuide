@@ -40,12 +40,12 @@ if (isset($_POST["Suche"])) $gesucht = true;
 			$teildb = mysqli_query($db, $sqlAus);
 			while ($fetched = mysqli_fetch_array($teildb))
             {
-                print "<div id=\"attraktion\">
-                        <h4>".$fetched['Titel']."</h4>
-                        Adresse: ".$fetched['Streetname']."<br>
-                        Nächste Bushaltestelle: ".$fetched['Bus_stop']."<br>
-                        Kurzbeschreibung: ".$fetched['Abstract']."<br>
-                        Auf der Karte: ".$fetched['Google_Maps']."
+                print "<div class=\"attraktion\">
+                        <center><h4>".$fetched['Titel']."</h4></center>
+                        <p><b>Adresse:</b><br> ".$fetched['Streetname']."</p><br>
+                        <p><b>Nächste Bushaltestelle:</b><br> ".$fetched['Bus_stop']."</p><br>
+                        <p><b>Kurzbeschreibung:</b><br>".$fetched['Abstract']."</p><br>
+                        <p><b>Auf der Karte:</b><br> ".$fetched['Google_Maps']."</p>
                     </div>";
             }
         }
