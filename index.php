@@ -52,7 +52,17 @@ if (isset($_POST["Suche"])) $gesucht = true;
             }
         } else {
             $sucht = save_sql($_POST["Suche"]);
-            suche($sucht, $db, "de");
+            $sqlSearch = "SELECT * FROM 'Stichwort' WHERE 'Keywords'='$sucht' INNER JOIN 'Suche' USING (StichwortID) INNER JOIN 'Guide' USING (GuideID);";
+            $tabelle = mysqli_query($db, $sqlSearch);
+            while ($fetch = mysqli_fetch_array($tabelle)) {
+                print "<div class=\"attraktion\">
+                        <center><h4>".$fetch['Titel']."</h4></center>
+                        <p><b>Adresse:</b><br> ".$fetch['Streetname']."</p><br>
+                        <p><b>Nächste Bushaltestelle:</b><br> ".$fetch['Bus_stop']."</p><br>
+                        <p><b>Kurzbeschreibung:</b><br>".$fetch['Abstract']."</p><br>
+                        <p><b>Auf der Karte:</b><br> ".$fetch['Google_Maps']."</p>
+                    </div>";
+            }
         }
     	?>
     </div>
