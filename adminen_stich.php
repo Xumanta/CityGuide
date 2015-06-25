@@ -1,16 +1,17 @@
 <?php
-	set_include_path('inc');
-	$mysql_database = "";
-	include "db_connect.inc.php";
+set_include_path('inc');
+$mysql_database = "City_GuideEn";
+include "db_connect.inc.php";
+include "function_save_sql.php";
 
-	if(isset($_POST['keyword']))
-	{
-		$stich = $_POST['keyword'];
-		$sqlEintrag = "INSERT INTO `Stichwort` (`StichwortID`, `Keywords`) VALUES ('NULL', '$stich')";
-		mysqli_query($db, $sqlEintrag);
+if(isset($_POST['keyword']))
+{
+	$stich = save_sql($_POST['keyword']);
+	$sqlEintrag = "INSERT INTO `Stichwort` (`StichwortID`, `Keywords`) VALUES ('NULL', '$stich')";
+	mysqli_query($db, $sqlEintrag);
 
-		header("Location: adminen_stich.php");
-	}
+	header("Location: adminen_stich.php");
+}
 ?>
 
 <html>

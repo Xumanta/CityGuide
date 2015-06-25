@@ -2,19 +2,18 @@
 set_include_path('inc');
 $mysql_database = "City_Guide";
 include "db_connect.inc.php";
+include "function_save_sql.php";
 
 if(isset($_POST["titel"]) and isset($_POST["adresse"]) and isset($_POST["nexthalte"]) and isset($_POST["gmlink"]) and isset($_POST["kurzbeschreibung"])) {
 	$titel =$_POST["titel"];
 	$adresse =$_POST["adresse"];
-	$nexthalte =$_POST["nexthalte"];
-	
-
+	$nexthalte =$_POST["nexthalte"]
 	$gmlink =$_POST["gmlink"];
 	$kurzbeschreibung =$_POST["kurzbeschreibung"];
 	$sqlEintrag = "INSERT INTO  `Guide` (`GuideID` ,`Titel` ,`Streetname` ,`Bus_stop` ,`Google_Maps` ,`Abstract`) VALUES (NULL , '$titel', '$adresse', '$nexthalte', '$gmlink', '$kurzbeschreibung');";
 	mysqli_query($db, $sqlEintrag);
 	// Eintraege wegen der Stichwoerter
-	header("Location: Adminde.php");
+	header("Location: adminde.php");
 }
 ?>
 

@@ -1,20 +1,19 @@
 <?php
 set_include_path('inc');
-$mysql_database = "";
+$mysql_database = "City_GuideEn";
 include "db_connect.inc.php";
+include "function_save_sql.php";
 
 if(isset($_POST["titel"]) and isset($_POST["adresse"]) and isset($_POST["nexthalte"]) and isset($_POST["gmlink"]) and isset($_POST["kurzbeschreibung"])) {
 	$titel =$_POST["titel"];
 	$adresse =$_POST["adresse"];
 	$nexthalte =$_POST["nexthalte"];
-	
-
 	$gmlink =$_POST["gmlink"];
 	$kurzbeschreibung =$_POST["kurzbeschreibung"];
 	$sqlEintrag = "INSERT INTO  `Guide` (`GuideID` ,`Titel` ,`Streetname` ,`Bus_stop` ,`Google_Maps` ,`Abstract`) VALUES (NULL , '$titel', '$adresse', '$nexthalte', '$gmlink', '$kurzbeschreibung');";
 	mysqli_query($db, $sqlEintrag);
 	// Eintraege wegen der Stichwoerter
-	header("Location: Adminde.php");
+	header("Location: adminen.php");
 }
 ?>
 
@@ -25,7 +24,7 @@ if(isset($_POST["titel"]) and isset($_POST["adresse"]) and isset($_POST["nexthal
 	<body>
 		<h1>Administration</h1>
 		Eintrag hinzufügen (de): <br>
-		<form method="POST" action="adminde.php">
+		<form method="POST" action="adminen.php">
 			Titel:<input ="text" name="titel" autocomplete="off" required="required"><br>
 			Adresse:<input ="text" name="adresse" autocomplete="off" required="required"><br>
 			Nächste Haltestelle:<input ="text" name="nexthalte" autocomplete="off" required="required"><br>
@@ -46,7 +45,7 @@ if (false) {
 	$sqlAusgabe = "SELECT * FROM `Guide`;";
 	$tabelle = mysqli_query($db, $sqlAusgabe);
 	while ($fetched = mysqli_fetch_array($tabelle)) {
-		print "<form action=\"Adminde.php";
+		print "";
 	}
 }
 ?>
