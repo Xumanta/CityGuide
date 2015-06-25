@@ -54,7 +54,7 @@ if (isset($_POST["Suche"])) $gesucht = true;
         } else {
             $sucht = editKey(save_sql($_POST["Suche"]));
             // $sqlSearch = "SELECT * FROM 'Stichwort' WHERE 'Keywords'='$sucht' INNER JOIN 'Suche' USING (StichwortID) INNER JOIN 'Guide' USING (GuideID);";
-            $sqlSearch = "SELECT * FROM 'Stichwort' WHERE 'Keywords'='$sucht' LEFT JOIN 'Suche' ON 'Stichwort'.'StichwortID' LEFT JOIN 'Guide' ON 'Suche'.'GuideID';";
+            $sqlSearch = "SELECT * FROM 'Stichwort' WHERE 'Keywords'='$sucht' RIGHT JOIN 'Suche' ON 'Stichwort'.'StichwortID' RIGHT JOIN 'Guide' ON 'Suche'.'GuideID';";
             $tabelle = mysqli_query($db, $sqlSearch);
             while ($fetch = mysqli_fetch_array($tabelle)) {
                 print "<div class=\"attraktion\">

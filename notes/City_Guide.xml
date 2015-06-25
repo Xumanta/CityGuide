@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.2.12deb2
+- http://www.phpmyadmin.net
+-
+- Host: localhost
+- Erstellungszeit: 25. Jun 2015 um 23:30
+- Server Version: 5.5.43-0+deb8u1
+- PHP-Version: 5.6.9-0+deb8u1
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="City_Guide" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="Guide">
+                CREATE TABLE Guide
+                (
+                GuideID INT NOT NULL AUTO_INCREMENT,
+                Titel VARCHAR(50),
+                Streetname VARCHAR(50),
+                Bus_stop VARCHAR(30),
+                Google_Maps VARCHAR(100),
+                Abstract VARCHAR(1024),
+                PRIMARY KEY(GuideID)
+                )
+            </pma:table>
+            <pma:table name="Stichwort">
+                CREATE TABLE Stichwort
+                (
+                StichwortID INT NOT NULL AUTO_INCREMENT,
+                Keywords VARCHAR(255),
+                PRIMARY KEY(StichwortID)
+                )
+            </pma:table>
+            <pma:table name="Suche">
+                CREATE TABLE Suche
+                (
+                GuideID INT NOT NULL,
+                StichwortID INT NOT NULL,
+                PRIMARY KEY(StichwortID, GuideID)
+                )
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Datenbank: 'City_Guide'
+    -->
+    <database name="City_Guide">
+        <!-- Tabelle Guide -->
+        <table name="Guide">
+            <column name="GuideID">1</column>
+            <column name="Titel">Little Tokyo</column>
+            <column name="Streetname">Immermann Str.</column>
+            <column name="Bus_stop">Immermann Str.</column>
+            <column name="Google_Maps">not</column>
+            <column name="Abstract">Die Immermannstra&amp;szlig;e ist die Hauptschlagader der japanischen Community in D&amp;uuml;sseldorf. 
+Hier befinden sich nicht nur das Japan-Center mit dem Generalkonsulat und Nikko-Hotel. 
+Auf der Immermannstra&amp;szlig;e und ... 
+</column>
+        </table>
+        <table name="Guide">
+            <column name="GuideID">2</column>
+            <column name="Titel">K&amp;ouml;nigsallee</column>
+            <column name="Streetname">K&amp;ouml;nigsallee</column>
+            <column name="Bus_stop">Steinstrasse, K&amp;ouml;nigsallee</column>
+            <column name="Google_Maps">not</column>
+            <column name="Abstract">Die K&amp;ouml;nigsallee, liebevoll kurz &amp;quot;K&amp;Ouml;&amp;quot; genannt, 
+ist anregendes Shoppingparadies und aufregende Ausgehmeile in einem, 
+Laufsteg der Modemutigen und Rastplatz f&amp;uuml;r Genie&amp;szlig;er. 
+Die unnachahmliche Kombination aus schwelgerischem Luxus und ...</column>
+        </table>
+        <table name="Guide">
+            <column name="GuideID">3</column>
+            <column name="Titel">Altstadt</column>
+            <column name="Streetname">Keine genauen Angaben m&amp;ouml;glich</column>
+            <column name="Bus_stop">Heinrich-Heine Allee</column>
+            <column name="Google_Maps">not</column>
+            <column name="Abstract">Ein wundersch&amp;ouml;ner Platz im Herzen der Altstadt. 
+Ein Highlight ist die &amp;quot;D&amp;uuml;sseldorfer Treppe&amp;quot;, 
+eine Art Panorama-Trib&amp;uuml;ne mit Blick auf den Rhein. 
+Hier gibt es h&amp;auml;ufig Street-Art, Stra&amp;szlig;enmusiker, Akrobaten etc. zu bestaunen....</column>
+        </table>
+        <table name="Guide">
+            <column name="GuideID">4</column>
+            <column name="Titel">Burgplatz</column>
+            <column name="Streetname">Heinrich-Heine Allee</column>
+            <column name="Bus_stop">Heinrich-Heine Allee</column>
+            <column name="Google_Maps">not</column>
+            <column name="Abstract">Der Burgplatz ist so etwas wie die gute Stube und ein Dreh- und Angelpunkt der Stadt. 
+Hier ist immer etwas los.Im Fr&amp;uuml;hsommer die Jazzralley, 
+Open-Air-Kino, um den 14. Juni erobern franz&amp;ouml;sische Oldtimer den Platz am Frankreich-Tag, 
+...</column>
+        </table>
+        <table name="Guide">
+            <column name="GuideID">5</column>
+            <column name="Titel">Rheinuferpromenade</column>
+            <column name="Streetname">-</column>
+            <column name="Bus_stop">-</column>
+            <column name="Google_Maps">not</column>
+            <column name="Abstract">Die Rheinuferpromenade verbindet die traditionsreiche Altstadt mit dem modernen 
+MedienHafen und wird ges&amp;auml;umt von Cafés und Bars. Von hier aus lassen sich die vorbei 
+ziehenden Rheinschiffe entspannt ...</column>
+        </table>
+        <table name="Guide">
+            <column name="GuideID">6</column>
+            <column name="Titel">Hauptbahnhof</column>
+            <column name="Streetname">-</column>
+            <column name="Bus_stop">D&amp;uuml;sseldorf Hbf</column>
+            <column name="Google_Maps">not</column>
+            <column name="Abstract">Der D&amp;uuml;sseldorfer D&amp;uuml;sseldorfer geh&amp;ouml;rt mit ca. 250.000 Reisenden pro Tag 
+zur Top Ten der meistfrequentierten Bahnh&amp;ouml;fe Deutschlands. 
+Man kommt schnell mit der Bahn zum jeden Ort.</column>
+        </table>
+        <table name="Guide">
+            <column name="GuideID">7</column>
+            <column name="Titel">Hofgarten</column>
+            <column name="Streetname">-</column>
+            <column name="Bus_stop">Janwellenplatz</column>
+            <column name="Google_Maps">not</column>
+            <column name="Abstract">Die gr&amp;uuml;ne Lunge mitten in der dichtbebauten City. 
+Wegen seiner Vielf&amp;auml;ltigkeit ist der Hofgarten ein beliebtes Ziel f&amp;uuml;r einen 
+erholsamen Spaziergang. Die Vielf&amp;auml;ltigkeit verdankt der Park den unterschiedlichen 
+Auffassungen &amp;uuml;ber...</column>
+        </table>
+        <table name="Guide">
+            <column name="GuideID">8</column>
+            <column name="Titel">Flughafen</column>
+            <column name="Streetname">-</column>
+            <column name="Bus_stop">Flughafen: Terminal A,B,C</column>
+            <column name="Google_Maps">not</column>
+            <column name="Abstract">Der D&amp;uuml;sseldorf Airport ist der drittgr&amp;ouml;&amp;szlig;te Flughafen Deutschlands und wichtigste 
+internationale Drehkreuz des Landes NRW</column>
+        </table>
+        <!-- Tabelle Stichwort -->
+        <table name="Stichwort">
+            <column name="StichwortID">1</column>
+            <column name="Keywords">Rheinuferpromenade</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">2</column>
+            <column name="Keywords">Altstadt</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">3</column>
+            <column name="Keywords">Medienhafen</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">4</column>
+            <column name="Keywords">Caffees</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">5</column>
+            <column name="Keywords">Bars</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">6</column>
+            <column name="Keywords">Rheinschiffe</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">7</column>
+            <column name="Keywords">Bahn</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">8</column>
+            <column name="Keywords">Zug</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">9</column>
+            <column name="Keywords">Hofgarten</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">10</column>
+            <column name="Keywords">Park</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">11</column>
+            <column name="Keywords">Airport</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">12</column>
+            <column name="Keywords">Flughafen</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">13</column>
+            <column name="Keywords">Burgplatz</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">14</column>
+            <column name="Keywords">Angelpunkt</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">15</column>
+            <column name="Keywords">Jazz-Ralley</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">16</column>
+            <column name="Keywords">Panorama</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">17</column>
+            <column name="Keywords">Rhein</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">18</column>
+            <column name="Keywords">Street-Art</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">19</column>
+            <column name="Keywords">K&amp;ouml;nigsallee</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">20</column>
+            <column name="Keywords">Shopping</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">21</column>
+            <column name="Keywords">Luxus</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">22</column>
+            <column name="Keywords">Japan-Center</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">23</column>
+            <column name="Keywords">Immermannstra&amp;szlig;e</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">24</column>
+            <column name="Keywords">Generalkonsultat</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">25</column>
+            <column name="Keywords">Restaurants</column>
+        </table>
+        <table name="Stichwort">
+            <column name="StichwortID">26</column>
+            <column name="Keywords">Gastronomie</column>
+        </table>
+        <!-- Tabelle Suche -->
+        <table name="Suche">
+            <column name="GuideID">5</column>
+            <column name="StichwortID">1</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">3</column>
+            <column name="StichwortID">2</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">5</column>
+            <column name="StichwortID">3</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">3</column>
+            <column name="StichwortID">4</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">5</column>
+            <column name="StichwortID">4</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">3</column>
+            <column name="StichwortID">5</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">5</column>
+            <column name="StichwortID">5</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">5</column>
+            <column name="StichwortID">6</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">6</column>
+            <column name="StichwortID">7</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">6</column>
+            <column name="StichwortID">8</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">7</column>
+            <column name="StichwortID">9</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">7</column>
+            <column name="StichwortID">10</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">8</column>
+            <column name="StichwortID">11</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">8</column>
+            <column name="StichwortID">12</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">4</column>
+            <column name="StichwortID">13</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">4</column>
+            <column name="StichwortID">14</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">4</column>
+            <column name="StichwortID">15</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">3</column>
+            <column name="StichwortID">16</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">5</column>
+            <column name="StichwortID">16</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">3</column>
+            <column name="StichwortID">17</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">5</column>
+            <column name="StichwortID">17</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">3</column>
+            <column name="StichwortID">18</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">2</column>
+            <column name="StichwortID">19</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">2</column>
+            <column name="StichwortID">20</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">2</column>
+            <column name="StichwortID">21</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">1</column>
+            <column name="StichwortID">22</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">1</column>
+            <column name="StichwortID">23</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">1</column>
+            <column name="StichwortID">24</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">1</column>
+            <column name="StichwortID">25</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">3</column>
+            <column name="StichwortID">25</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">1</column>
+            <column name="StichwortID">26</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">3</column>
+            <column name="StichwortID">26</column>
+        </table>
+        <table name="Suche">
+            <column name="GuideID">5</column>
+            <column name="StichwortID">26</column>
+        </table>
+    </database>
+</pma_xml_export>
