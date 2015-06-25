@@ -6,7 +6,7 @@
 	if(isset($_POST['stichwort']))
 	{
 		$stich = $_POST['stichwort'];
-		$sqlEintrag = "INSERT INTO `Suche` (`SucheID`, `Keywords`) VALUES ('NULL', '$stich')";
+		$sqlEintrag = "INSERT INTO `Stichwort` (`StichwortID`, `Keywords`) VALUES ('NULL', '$stich')";
 		mysqli_query($db,$sqlEintrag);
 
 		header("Location: adminde_stich.php");
@@ -29,7 +29,7 @@
 		Bereits eingetragene Stichw&ouml;rter:
 		<br/>
 		<?php
-			$sqlAusgabe = "SELECT * FROM `Suche`;";
+			$sqlAusgabe = "SELECT * FROM `Stichwort`;";
 			$tabelle = mysqli_query($db, $sqlAusgabe);
 			while ($fetched = mysqli_fetch_array($tabelle))
 			{

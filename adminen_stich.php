@@ -6,7 +6,7 @@
 	if(isset($_POST['keyword']))
 	{
 		$stich = $_POST['keyword'];
-		$sqlEintrag = "INSERT INTO `Suche` (`SucheID`, `Keywords`) VALUES ('NULL', '$stich')";
+		$sqlEintrag = "INSERT INTO `Stichwort` (`StichwortID`, `Keywords`) VALUES ('NULL', '$stich')";
 		mysqli_query($db,$sqlEintrag);
 
 		header("Location: adminen_stich.php");
@@ -21,7 +21,7 @@
 		<h1>Administration - Keywords</h1>
 		Add Entry (en): <br />
 		<form method="POST" action="adminen_stich.php">
-			Neues Stichwort: <input ="text" name="keyword" />
+			New Kyword: <input ="text" name="keyword" />
 			<input ="submit" name="Add!" />
 		</form>
 		<br/>
@@ -29,7 +29,7 @@
 		Added Keywords:
 		<br/>
 		<?php
-			$sqlAusgabe = "SELECT * FROM `Suche`;";
+			$sqlAusgabe = "SELECT * FROM `Stichwort`;";
 			$tabelle = mysqli_query($db, $sqlAusgabe);
 			while ($fetched = mysqli_fetch_array($tabelle))
 			{
