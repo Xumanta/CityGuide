@@ -7,7 +7,7 @@
 	{
 		$stich = $_POST['keyword'];
 		$sqlEintrag = "INSERT INTO `Stichwort` (`StichwortID`, `Keywords`) VALUES ('NULL', '$stich')";
-		mysqli_query($db,$sqlEintrag);
+		mysqli_query($db, $sqlEintrag);
 
 		header("Location: adminen_stich.php");
 	}
