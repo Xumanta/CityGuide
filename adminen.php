@@ -13,6 +13,14 @@ if(isset($_POST["titel"]) and isset($_POST["adresse"]) and isset($_POST["nexthal
 	$sqlEintrag = "INSERT INTO  `Guide` (`GuideID` ,`Titel` ,`Streetname` ,`Bus_stop` ,`Google_Maps` ,`Abstract`) VALUES (NULL , '$titel', '$adresse', '$nexthalte', '$gmlink', '$kurzbeschreibung');";
 	mysqli_query($db, $sqlEintrag);
 	// Eintraege wegen der Stichwoerter
+
+			// $sqlAusgabe = "SELECT * FROM `Stichwort`;";
+			// $tabelle = mysqli_query($db, $sqlAusgabe);
+			// while ($fetched = mysqli_fetch_array($tabelle))
+			// {
+			// 	print "$fetched['Keywords'] <br/>";
+			// }
+
 	header("Location: adminen.php");
 }
 ?>
