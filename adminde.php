@@ -1,6 +1,6 @@
 <?php
 set_include_path('inc');
-$mysql_database = "";
+$mysql_database = "City_Guide";
 include "db_connect.inc.php";
 
 if(isset($_POST["titel"]) and isset($_POST["adresse"]) and isset($_POST["nexthalte"]) and isset($_POST["gmlink"]) and isset($_POST["kurzbeschreibung"])) {

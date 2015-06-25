@@ -6,7 +6,6 @@ include "db_connect.inc.php";
 $gesucht = false;
 if (isset($_POST["Suche"])) $gesucht = true;
 
-
 ?>
 <html>
 <head>
@@ -46,7 +45,7 @@ if (isset($_POST["Suche"])) $gesucht = true;
                         Adresse: ".$fetched['Streetname']."<br>
                         Nächste Bushaltestelle: ".$fetched['Bus_stop']."<br>
                         Kurzbeschreibung: ".$fetched['Abstract']."<br>
-                        Auf der Karte: ".$fetched['Google Maps']."
+                        Auf der Karte: ".$fetched['Google_Maps']."
                     </div>";
             }
         }
