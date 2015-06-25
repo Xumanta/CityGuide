@@ -2,9 +2,11 @@
 set_include_path('inc');
 $mysql_database = "City_GuideEn";
 include "db_connect.inc.php";
-// include SUCHE
+include "function_save_sql.php";
+include "function_search.php";
+
 $gesucht = false;
-if (isset($_POST["Suche"])) $gesucht = true;
+if (isset($_POST["Search"])) $gesucht = true;
 
 ?>
 <html>
@@ -48,6 +50,9 @@ if (isset($_POST["Suche"])) $gesucht = true;
                         <p><b>On Map:</b><br> ".$fetched['Google_Maps']."</p>
                     </div>";
             }
+        } else {
+            $sucht = save_sql($_POST["Search"]);
+            suche($sucht, $db, "en");
         }
     	?>
     </div>

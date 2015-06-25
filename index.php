@@ -52,8 +52,7 @@ if (isset($_POST["Suche"])) $gesucht = true;
             }
         } else {
             $sucht = save_sql($_POST["Suche"]);
-            $tabelle = suche($sucht, $db);
-
+            suche($sucht, $db, "de");
         }
     	?>
     </div>
