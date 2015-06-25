@@ -8,7 +8,7 @@ Titel VARCHAR(50),
 Streetname VARCHAR(50),
 Bus_stop VARCHAR(30),
 Google_Maps VARCHAR(100),
-Abstract VARCHAR(255),
+Abstract VARCHAR(1024),
 PRIMARY KEY(GuideID)
 );
 
@@ -29,7 +29,7 @@ PRIMARY KEY(StichwortID, GuideID)
 
 
 CREATE DATABASE City_GuideEn;
-USE City_Guide;
+USE City_GuideEn;
 
 CREATE TABLE Guide
 (
@@ -38,7 +38,7 @@ Titel VARCHAR(50),
 Streetname VARCHAR(50),
 Bus_stop VARCHAR(30),
 Google_Maps VARCHAR(100),
-Abstract VARCHAR(255),
+Abstract VARCHAR(1024),
 PRIMARY KEY(GuideID)
 );
 

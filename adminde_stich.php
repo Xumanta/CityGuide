@@ -13,7 +13,7 @@ if(isset($_POST['stichwort']))
 	header("Location: adminde_stich.php");
 }
 ?>
-
+<!DOCTYPE html>
 <html>
 	<head>
 		<tile>Administration - Stichw&ouml;rter</title>

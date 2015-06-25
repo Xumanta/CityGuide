@@ -8,6 +8,7 @@ $gesucht = false;
 if (isset($_POST["Search"])) $gesucht = true;
 
 ?>
+<!DOCTYPE html>
 <html>
 <head>
     <title>City Guide</title>
@@ -51,7 +52,8 @@ if (isset($_POST["Search"])) $gesucht = true;
             }
         } else {
             $sucht = editKey(save_sql($_POST["Search"]));
-            $sqlSearch = "SELECT * FROM 'Stichwort' WHERE 'Keywords'='$sucht' INNER JOIN 'Suche' USING (StichwortID) INNER JOIN 'Guide' USING (GuideID);";
+            // $sqlSearch = "SELECT * FROM 'Stichwort' WHERE 'Keywords'='$sucht' INNER JOIN 'Suche' USING (StichwortID) INNER JOIN 'Guide' USING (GuideID);";
+            $sqlSearch = "SELECT * FROM 'Stichwort' WHERE 'Keywords'='$sucht' LEFT JOIN 'Suche' ON 'Stichwort'.'StichwortID' LEFT JOIN 'Guide' ON 'Suche'.'GuideID';";
             $tabelle = mysqli_query($db, $sqlSearch);
             while ($fetch = mysqli_fetch_array($tabelle))
             {

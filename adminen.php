@@ -24,7 +24,7 @@ if(isset($_POST["titel"]) and isset($_POST["adresse"]) and isset($_POST["nexthal
 	header("Location: adminen.php");
 }
 ?>
-
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Adminstration</title>

@@ -13,7 +13,7 @@ if(isset($_POST['keyword']))
 	header("Location: adminen_stich.php");
 }
 ?>
-
+<!DOCTYPE html>
 <html>
 	<head>
 		<tile>Administration - Keywords</title>
