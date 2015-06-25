@@ -3,7 +3,7 @@ set_include_path('inc');
 $mysql_database = "City_Guide";
 include "db_connect.inc.php";
 include "function_save_sql.php";
-include "function_search.php";
+include "function_editKey.php";
 
 $gesucht = false;
 if (isset($_POST["Suche"])) $gesucht = true;
@@ -51,7 +51,7 @@ if (isset($_POST["Suche"])) $gesucht = true;
                     </div>";
             }
         } else {
-            $sucht = save_sql($_POST["Suche"]);
+            $sucht = editKey(save_sql($_POST["Suche"]));
             $sqlSearch = "SELECT * FROM 'Stichwort' WHERE 'Keywords'='$sucht' INNER JOIN 'Suche' USING (StichwortID) INNER JOIN 'Guide' USING (GuideID);";
             $tabelle = mysqli_query($db, $sqlSearch);
             while ($fetch = mysqli_fetch_array($tabelle)) {
