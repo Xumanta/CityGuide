@@ -38,15 +38,7 @@ body {
 }
 
 .attraktion {
-    margin-top: 0.5em;
     margin-bottom: 0.5em;
-    margin-left: 1em;
-    margin-right: 1em;
-    background-color: white;
-    box-shadow: 0px 5px 4.75px 0.25px rgba(0, 0, 0, 0.35);
-    width: auto;
-    height: 20em;
-    z-index: 11;
 }
 .language {
     width: 2em;
@@ -67,3 +59,14 @@ body {
 }
 
 
+.content {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    background-color: white;
+    box-shadow: 0px 5px 4.75px 0.25px rgba(0, 0, 0, 0.35);
+    width: auto;
+    height: 20em;
+    z-index: 11;
+}
