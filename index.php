@@ -22,10 +22,8 @@ if (isset($_POST["Suche"])) $gesucht = true;
                 <img src="images/logo.png">
             </div>
             
-            <div>
-                <a href="index_en.php"><img class="language" src="images/flag_en.png"></a>
-                <a href="#"><img class="language" src="images/flag_ger.png"></a>
-            </div>
+            <a href="index_en.php"><img class="language" src="images/flag_en.png"></a>
+            <a href="#"><img class="language" src="images/flag_ger.png"></a>
 
             <div class="search">
                 <form action="index.php" method="POST">

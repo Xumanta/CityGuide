@@ -1,6 +1,6 @@
 <?php
 set_include_path('inc');
-$mysql_database = "";
+$mysql_database = "City_GuideEn";
 include "db_connect.inc.php";
 // include SUCHE
 $gesucht = false;
@@ -23,10 +23,8 @@ if (isset($_POST["Suche"])) $gesucht = true;
                 <img src="images/logo.png">
             </div>
             
-            <div>
-                <a href="#"><img class="language" src="images/flag_en.png"></a>
-                <a href="index.php"><img class="language" src="images/flag_ger.png"></a>
-            </div>
+            <a href="#"><img class="language" src="images/flag_en.png"></a>
+            <a href="index.php"><img class="language" src="images/flag_ger.png"></a>
 
             <div class="search">
                 <form action="index.php">
@@ -46,11 +44,11 @@ if (isset($_POST["Suche"])) $gesucht = true;
             {
                 print 
                     "<div id=\"attraktion\">
-                        <h4>$fetched[\"Titel\"]</h4>
-                        Adresse: $fetched['Street name']<br>
-                        Nächste Bushaltestelle: $fetched['Bus stop']<br>
-                        Kurzbeschreibung: $fetched['Abstract']<br>
-                        Auf der Karte: $fetched['Google Maps']
+                        <h4>".$fetched['Titel']."</h4>
+                        Adresse: ".$fetched['Street name']."<br>
+                        Nächste Bushaltestelle: ".$fetched['Bus stop']."<br>
+                        Kurzbeschreibung: ".$fetched['Abstract']."<br>
+                        Auf der Karte: ".$fetched['Google Maps']."
                     </div>";
             }
         }
