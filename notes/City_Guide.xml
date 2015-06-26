@@ -139,107 +139,107 @@ internationale Drehkreuz des Landes NRW</column>
         <!-- Tabelle Stichwort -->
         <table name="Stichwort">
             <column name="StichwortID">1</column>
-            <column name="Keywords">Rheinuferpromenade</column>
+            <column name="Keywords">rheinuferpromenade</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">2</column>
-            <column name="Keywords">Altstadt</column>
+            <column name="Keywords">altstadt</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">3</column>
-            <column name="Keywords">Medienhafen</column>
+            <column name="Keywords">medienhafen</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">4</column>
-            <column name="Keywords">Caffees</column>
+            <column name="Keywords">caffees</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">5</column>
-            <column name="Keywords">Bars</column>
+            <column name="Keywords">bars</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">6</column>
-            <column name="Keywords">Rheinschiffe</column>
+            <column name="Keywords">rheinschiffe</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">7</column>
-            <column name="Keywords">Bahn</column>
+            <column name="Keywords">bahn</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">8</column>
-            <column name="Keywords">Zug</column>
+            <column name="Keywords">zug</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">9</column>
-            <column name="Keywords">Hofgarten</column>
+            <column name="Keywords">hofgarten</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">10</column>
-            <column name="Keywords">Park</column>
+            <column name="Keywords">park</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">11</column>
-            <column name="Keywords">Airport</column>
+            <column name="Keywords">airport</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">12</column>
-            <column name="Keywords">Flughafen</column>
+            <column name="Keywords">flughafen</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">13</column>
-            <column name="Keywords">Burgplatz</column>
+            <column name="Keywords">burgplatz</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">14</column>
-            <column name="Keywords">Angelpunkt</column>
+            <column name="Keywords">angelpunkt</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">15</column>
-            <column name="Keywords">Jazz-Ralley</column>
+            <column name="Keywords">jazz-ralley</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">16</column>
-            <column name="Keywords">Panorama</column>
+            <column name="Keywords">panorama</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">17</column>
-            <column name="Keywords">Rhein</column>
+            <column name="Keywords">rhein</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">18</column>
-            <column name="Keywords">Street-Art</column>
+            <column name="Keywords">street-Art</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">19</column>
-            <column name="Keywords">K&amp;ouml;nigsallee</column>
+            <column name="Keywords">k&amp;ouml;nigsallee</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">20</column>
-            <column name="Keywords">Shopping</column>
+            <column name="Keywords">shopping</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">21</column>
-            <column name="Keywords">Luxus</column>
+            <column name="Keywords">luxus</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">22</column>
-            <column name="Keywords">Japan-Center</column>
+            <column name="Keywords">japan-center</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">23</column>
-            <column name="Keywords">Immermannstra&amp;szlig;e</column>
+            <column name="Keywords">immermannstra&amp;szlig;e</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">24</column>
-            <column name="Keywords">Generalkonsultat</column>
+            <column name="Keywords">generalkonsultat</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">25</column>
-            <column name="Keywords">Restaurants</column>
+            <column name="Keywords">restaurants</column>
         </table>
         <table name="Stichwort">
             <column name="StichwortID">26</column>
-            <column name="Keywords">Gastronomie</column>
+            <column name="Keywords">gastronomie</column>
         </table>
         <!-- Tabelle Suche -->
         <table name="Suche">

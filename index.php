@@ -25,7 +25,7 @@ if (isset($_POST["Suche"])) $gesucht = true;
             </div>
             
             <a href="index_en.php"><img class="language" src="images/flag_en.png"></a>
-            <a href="#"><img class="language" src="images/flag_ger.png"></a>
+            <a href="index.php"><img class="language" src="images/flag_ger.png"></a>
 
             <div class="search">
                 <form action="index.php" method="POST">
@@ -54,7 +54,8 @@ if (isset($_POST["Suche"])) $gesucht = true;
         } else {
             $sucht = editKey(save_sql($_POST["Suche"]));
             // $sqlSearch = "SELECT * FROM 'Stichwort' WHERE 'Keywords'='$sucht' INNER JOIN 'Suche' USING (StichwortID) INNER JOIN 'Guide' USING (GuideID);";
-            $sqlSearch = "SELECT * FROM 'Stichwort' WHERE 'Keywords'='$sucht' RIGHT JOIN 'Suche' ON 'Stichwort'.'StichwortID' RIGHT JOIN 'Guide' ON 'Suche'.'GuideID';";
+           // $sqlSearch = "SELECT * FROM 'Stichwort' WHERE 'Keywords'='$sucht' RIGHT JOIN 'Suche' ON 'Stichwort'.'StichwortID' RIGHT JOIN 'Guide' ON 'Suche'.'GuideID';";
+            $sqlSearch = "SELECT Titel , Streetname , Bus_stop , Abstract , Google_Maps FROM Guide g INNER JOIN Suche su INNER JOIN Stichwort st ON g.GuideID = su.GuideID AND su.StichwortID = st.StichwortID WHERE st.Keywords = '$sucht';";
             $tabelle = mysqli_query($db, $sqlSearch);
             while ($fetch = mysqli_fetch_array($tabelle)) {
                 print "<div class=\"attraktion\">
