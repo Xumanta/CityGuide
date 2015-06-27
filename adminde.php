@@ -1,19 +1,21 @@
 <?php
 set_include_path('inc');
-$mysql_database = "City_Guide";
-include "db_connect.inc.php";
-include "function_save_sql.php";
+$mysql_database = "City_Guide";  // Set used Database for Output
+include "db_connect.inc.php";	 // Universal connect
+include "function_save_sql.php"; // For secure Database Queries
+include "function_editKey.php";  // Makes Search better
 
 if(isset($_POST["titel"]) and isset($_POST["adresse"]) and isset($_POST["nexthalte"]) and isset($_POST["gmlink"]) and isset($_POST["kurzbeschreibung"])) {
-	$titel =$_POST["titel"];
-	$adresse =$_POST["adresse"];
-	$nexthalte =$_POST["nexthalte"]
-	$gmlink =$_POST["gmlink"];
-	$kurzbeschreibung =$_POST["kurzbeschreibung"];
-	$sqlEintrag = "INSERT INTO  `Guide` (`GuideID` ,`Titel` ,`Streetname` ,`Bus_stop` ,`Google_Maps` ,`Abstract`) VALUES (NULL , '$titel', '$adresse', '$nexthalte', '$gmlink', '$kurzbeschreibung');";
+	$titel =$_POST["titel"];	 // Name Change
+	$adresse =$_POST["adresse"];	 // Name Change
+	$nexthalte =$_POST["nexthalte"]; // Name Change
+	$gmlink =$_POST["gmlink"];	 // Name Change
+	$kurzbeschreibung =$_POST["kurzbeschreibung"]; // Name Change
+	$sqlEintrag = "INSERT INTO  `Guide` (`GuideID` ,`Titel` ,`Streetname` ,`Bus_stop` ,`Google_Maps` ,`Abstract`) VALUES (NULL , '$titel', '$adresse', '$nexthalte', '$gmlink', '$kurzbeschreibung');"; //Insert in Database Guide Texts
 	mysqli_query($db, $sqlEintrag);
-	// Eintraege wegen der Stichwoerter
+	// Add Link between Keyword and Guide
 
+	// Not relevant for Final Programm
 	// $sqlAusgabe = "SELECT * FROM `Stichwort`;";
 	// $tabelle = mysqli_query($db, $sqlAusgabe);
 	// while ($fetched = mysqli_fetch_array($tabelle))
@@ -21,7 +23,7 @@ if(isset($_POST["titel"]) and isset($_POST["adresse"]) and isset($_POST["nexthal
 	// 	print "$fetched['Keywords'] <br/>";
 	// }
 	
-	header("Location: adminde.php");
+	header("Location: adminde.php");  // Header on this File for cleaning the Post cache
 }
 ?>
 <!DOCTYPE html>
@@ -38,13 +40,13 @@ if(isset($_POST["titel"]) and isset($_POST["adresse"]) and isset($_POST["nexthal
 			Nächste Haltestelle:<input ="text" name="nexthalte" autocomplete="off" required="required"><br>
 			G-Maps Link:<input ="text" name="gmlink" autocomplete="off" required="required"><br>
 			Kurzbeschreibung:<textarea rows="7" cols="80" name ="kurzbeschreibung" autocomplete="off" required="required"></textarea>
-			<!-- Auswählen der Stickwörter-->
+			<!-- Choose Keywords -->
 			<?php
 				$sqlStichAus = "SELECT * FROM `Suche`";
 				$stickTab = mysqli_query($db, $sqlStichAus);
 				while ($stichfetch = mysqli_fetch_array($stickTab)) {
 					print "<input type=\"checkbox\" name=\"keyw\" value=\"$stichfetch['Keywords']\" />";
-				}
+				} // Output input checkbox for Keywords
 			?>
 			<input="submit" value="Eintragen!">
 		</form>
@@ -54,11 +56,11 @@ if (false) {
 	$tabelle = mysqli_query($db, $sqlAusgabe);
 	while ($fetched = mysqli_fetch_array($tabelle)) {
 		print "<form action=\"Adminde.php";
-	}
+	} // Should print all Guides
 }
 ?>
 	</body>
 </html>
 <?php
-mysqli_close($db);
+mysqli_close($db); // Close Database Connection
 ?>
