@@ -1,26 +1,26 @@
 <?php
-	// Sicherungsmuster für SQL eingaben als Funktion
+	// Search for Bad 
 	function save_sql($input) {
 	
-		$suchmuster = array();
-		$suchmuster[0] = '/Ü/';
-		$suchmuster[1] = '/ü/';
-		$suchmuster[2] = '/Ä/';
-		$suchmuster[3] = '/ä/';
-		$suchmuster[4] = '/Ö/';
-		$suchmuster[5] = '/ö/';
-		$suchmuster[6] = '/ß/';
+		$searcher = array();
+		$searcher[0] = '/Ü/';
+		$searcher[1] = '/ü/';
+		$searcher[2] = '/Ä/';
+		$searcher[3] = '/ä/';
+		$searcher[4] = '/Ö/';
+		$searcher[5] = '/ö/';
+		$searcher[6] = '/ß/';
 
-		$ersetzungen = array();
-		$ersetzungen[0] = '&Uuml;';
-		$ersetzungen[1] = '&uuml;';
-		$ersetzungen[2] = '&Auml;';
-		$ersetzungen[3] = '&auml;';
-		$ersetzungen[4] = '&Ouml;';
-		$ersetzungen[5] = '&ouml;';
-		$ersetzungen[6] = '&szlig;';
+		$replacer = array();
+		$replacer[0] = '&Uuml;';
+		$replacer[1] = '&uuml;';
+		$replacer[2] = '&Auml;';
+		$replacer[3] = '&auml;';
+		$replacer[4] = '&Ouml;';
+		$replacer[5] = '&ouml;';
+		$replacer[6] = '&szlig;';
 	
-		$erg = addslashes(preg_replace($suchmuster, $ersetzungen, $input));
+		$erg = addslashes(preg_replace($searcher, $replacer, $input));
 		return $erg;
 	}
 ?>
