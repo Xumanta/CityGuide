@@ -20,7 +20,7 @@ if (isset($_POST["Search"])) $gesucht = true;
         <div class="container">
             <div class="logo">
                 <!-- <h1> Der City Guide </h1> -->
-                <img src="images/logo.png">
+                <a href="index_en.php"><img src="images/logo.png" /></a>
             </div>
             
             <a href="#"><img class="language" src="images/flag_en.png"></a>
