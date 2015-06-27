@@ -2,10 +2,10 @@
 $mysql_host = "";
 $mysql_user = "";
 $mysql_password = "";
-// $mysql_database = ""; // Wird übergeben!
+// $mysql_database = ""; // Given
 
 // $db = mysql_connect($mysql_host, $mysql_user, $mysql_password);
-// mysql_select_db($mysql_database, $db);
+// mysql_select_db($mysql_database, $db); // For older Server
 
-$db = mysqli_connect($mysql_host, $mysql_user, $mysql_password, $mysql_database);
+$db = mysqli_connect($mysql_host, $mysql_user, $mysql_password, $mysql_database); // Open Connection
 ?>
