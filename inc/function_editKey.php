@@ -1,5 +1,5 @@
 <?php
-// Suche nach Stichwörtern für GuideIDs
+// Edits Keywords to lower case - outcomments makes the first upper case and rest lower case
 function editKey($input) {
 	// $laenge = strlen($input);
 	// $erstesZeichen = strtoupper(substr($input, 0, 1));
