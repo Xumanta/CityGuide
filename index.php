@@ -21,7 +21,7 @@ if (isset($_POST["Suche"])) $gesucht = true;
         <div class="container">
             <div class="logo">
                 <!-- <h1> Der City Guide </h1> -->
-                <img src="images/logo.png">
+                <a href="index.php"><img src="images/logo.png" /></a>
             </div>
             
             <a href="index_en.php"><img class="language" src="images/flag_en.png"></a>
